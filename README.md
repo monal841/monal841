@@ -1,4 +1,5 @@
 this project generate image based on keyword given by user 
+uses UNSPLASH api
 
 
 hi this project was created by me and my 4 other classmates :-
