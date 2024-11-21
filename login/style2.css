@@ -1,0 +1,110 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at 20% 50%, #0f0f0f, #1c1c1c, #3a1c71);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-y: scroll; /* Enable vertical scrolling on the body */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.2); /* Firefox */
+}
+
+/* Gradient background animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Full image container */
+.image-container {
+    width: 100%;
+    overflow: hidden; /* Hide any overflow */
+    position: relative; /* Allow absolute positioning of the image */
+    display: flex; /* Enable flexbox for responsive image handling */
+    justify-content: center; /* Center the image horizontally */
+}
+
+/* Image styling */
+.image-container img {
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the entire container without stretching */
+    display: block; /* Prevent inline space below the image */
+}
+
+/* Container styling */
+.container {
+    position: relative;
+    max-width: 70%; /* Maximum width of the container */
+    height: 175vh; /* Container height set to 75% of the viewport height */
+    margin: 30px auto; /* Margin for spacing from the top and bottom */
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4); /* 40% opaque black background for translucency */
+    backdrop-filter: blur(8px); /* Added blur effect for better readability */
+    border-radius: 15px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.9); /* Darker shadow */
+    z-index: 1;
+}
+
+/* Custom Scrollbar Styles for WebKit browsers */
+body::-webkit-scrollbar {
+    width: 2px; /* Width of the scrollbar */
+    background: rgba(0, 0, 0, 0.2); /* Background of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(42, 12, 65, 0.603); /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(27, 7, 42, 0.603); /* Color on hover */
+}
+
+/* Button styling */
+input[type="submit"], .logout-btn {
+    background: #0f3d63; /* Changed to dark blue */
+    color: #41abec; /* White text for contrast */
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 20px 0; /* Increased margin for more space between buttons */
+    transition: background-color 0.5s; /* Slower transition */
+}
+
+input[type="submit"]:hover, .logout-btn:hover {
+    background: #3a1c71; /* Darker blue on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* Input fields with light colors */
+select, input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #e63737; /* Soft gray */
+    background: transparent; /* Made background transparent */
+    color: #293bd8; /* White text for contrast */
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #8ecae6; /* Light blue on focus */
+}
+
+/* Labels and additional input styles can remain unchanged or modified as needed */
+.label {
+    color: #ffffff; /* Ensure labels are visible against the dark background */
+    position: absolute;
+    left: 2.2rem;
+    top: -1.5rem;
+    font-size: 1rem;
+    transition: 0.3s ease all;
+}

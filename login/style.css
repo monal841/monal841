@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at 20% 50%, #0f0f0f, #1c1c1c, #3a1c71);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    color: #ffffff;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    width: 450px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffaf7b;
+    margin-bottom: 1.2rem;
+}
+
+/* Input Field Styles */
+.input-group {
+    padding: 1% 0;
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    color: #8ecae6;
+    transition: color 0.3s ease;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #757575;
+    padding-left: 2rem;
+    font-size: 1rem;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #8ecae6;
+}
+
+label {
+    color: #aaa;
+    position: absolute;
+    left: 2.2rem;
+    top: -1.5rem;
+    font-size: 1rem;
+    transition: 0.3s ease all;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: -2.5rem;
+    color: #ffaf7b;
+    font-size: 0.85rem;
+}
+
+/* Button and Link Styles */
+.recover a {
+    color: #8ecae6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.recover a:hover {
+    color: #ffaf7b;
+    text-decoration: underline;
+}
+
+.btn {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: #0f3d63;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #3a1c71;
+}
+
+.or {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    text-align: center;
+    color: #8ecae6;
+}
+
+.icons i {
+    color: #8ecae6;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.icons i:hover {
+    transform: scale(1.1);
+    color: #ffaf7b;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #8ecae6;
+}
+
+button {
+    background: none;
+    border: none;
+    color: #ffaf7b;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+button:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* AI-Inspired Geometric Patterns */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    animation: pulse 8s infinite ease-in-out;
+}
+
+body::before {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    top: 15%;
+    left: 10%;
+    animation-duration: 12s;
+}
+
+body::after {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    bottom: 15%;
+    right: 10%;
+    animation-duration: 20s;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Moving Dots Animation */
+body::before,
+body::after {
+    background-size: 20px 20px;
+    background-position: center;
+}
