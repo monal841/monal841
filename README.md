@@ -1,9 +1,15 @@
+this project generate image based on keyword given by user 
+
+
 hi this project was created by me and my 4 other classmates :-
 me (monal)
 abhishake
 rounak
 aditiya 
 karan
+
+->to RUN this image generator you will also need a local server configured such as XAMMP or WAMP
+->if you use xampp - paste the "login" folder in   C:\xampp\htdocs 
 
 <!---
 monal841/monal841 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
