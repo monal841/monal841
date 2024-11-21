@@ -5,7 +5,7 @@ uses UNSPLASH api
 hi this project was created by me and my 4 other classmates :-
 Abhishek
 Monal
-Aitiya 
+Aditya 
 Rounak
 Karan
 
